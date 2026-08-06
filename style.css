@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#050816;
+    overflow-x:hidden;
+    color:#fff;
+    position:relative;
+}
+
+.background-animation{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(0,255,255,.12),transparent 30%),
+    radial-gradient(circle at 80% 30%,rgba(255,0,255,.10),transparent 30%),
+    radial-gradient(circle at 50% 80%,rgba(0,153,255,.12),transparent 35%);
+    z-index:-2;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.glass-card{
+    width:100%;
+    max-width:700px;
+    padding:45px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+    text-align:center;
+}
+.logo{
+    width:110px;
+    height:110px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    overflow:hidden;
+    background:rgba(255,255,255,.08);
+    border:2px solid rgba(255,255,255,.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+h1{
+    font-size:42px;
+    font-weight:800;
+    line-height:1.3;
+    margin-bottom:20px;
+}
+
+h1 span{
+    color:#00e5ff;
+}
+
+.description{
+    font-size:18px;
+    color:#d7d7d7;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.telegram-btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:18px 45px;
+    border-radius:50px;
+    background:#229ED9;
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.telegram-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 35px rgba(34,158,217,.35);
+}
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:40px;
+}
+
+.feature-card{
+    padding:18px;
+    border-radius:18px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    font-weight:600;
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.12);
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:35px;
+}
+
+.stat-box{
+    padding:20px;
+    border-radius:18px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.10);
+}
+
+.stat-box h2{
+    font-size:30px;
+    color:#00e5ff;
+    margin-bottom:8px;
+}
+
+.stat-box p{
+    color:#d0d0d0;
+    font-size:15px;
+}
+
+@media(max-width:768px){
+
+    .glass-card{
+        padding:30px 22px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    .description{
+        font-size:16px;
+    }
+
+    .features,
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .telegram-btn{
+        width:100%;
+    }
+
+}
